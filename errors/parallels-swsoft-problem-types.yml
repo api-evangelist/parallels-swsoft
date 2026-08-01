@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.parallels.com/landing/ras-rest-api-guide/examples/basic-sample
+api: Parallels RAS REST API
+format: http-status-json
+envelope: >-
+  Errors are returned as JSON with a standard HTTP status code. Successful
+  responses return the resource object or array directly (no wrapper). There is
+  no application/problem+json (RFC 9457) contract.
+problems:
+  - status: 401
+    title: Unauthorized
+    detail: >-
+      Missing/invalid auth_token, or the session token has expired. Re-authenticate
+      via POST api/session/logon.
+  - status: 403
+    title: Forbidden
+    detail: Authenticated administrator lacks permission for the requested resource.
+  - status: 404
+    title: Not Found
+    detail: The addressed resource (e.g. site/{id}, gateway/{id}) does not exist.
+  - status: 400
+    title: Bad Request
+    detail: Malformed request body or missing required fields.
+  - status: 500
+    title: Internal Server Error
+    detail: Unexpected error on the RAS server.

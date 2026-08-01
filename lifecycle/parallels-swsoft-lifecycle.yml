@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.parallels.com/landing/ras-rest-api-guide
+api: Parallels RAS REST API
+versioning:
+  scheme: content-type-parameter
+  current: '1.0'
+  detail: >-
+    REST API version is selected via the api-version parameter on the
+    Content-Type header (application/json; api-version=1.0). The REST API guide
+    is published per RAS product release (guides exist for RAS 19, 20, 21).
+  docs: https://docs.parallels.com/landing/ras-rest-api-guide
+product_versioning:
+  scheme: dated-major-release
+  detail: >-
+    Parallels RAS ships as numbered major releases (…, 19, 20, 21) with
+    incremental updates (e.g. 20.2). The REST and PowerShell APIs are versioned
+    alongside the product.
+  admin_guide: https://docs.parallels.com/landing/ras-admin-guide
+support:
+  url: https://www.parallels.com/products/ras/support/
+  detail: 24/7 phone and email support for active subscriptions; ticketing via the Parallels Support Portal.
+status_page:
+  published: false
+  note: >-
+    Parallels RAS is customer-self-hosted software; there is no Parallels-operated
+    public status page for the management API.
+deprecation:
+  policy_url: null
+  note: >-
+    No formal RFC 8594 Sunset/Deprecation-header contract is documented for the
+    RAS REST API. Deprecations are communicated through per-release
+    documentation and product lifecycle / end-of-life notices.
+deprecated_operations: []

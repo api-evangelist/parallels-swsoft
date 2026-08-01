@@ -1,0 +1,40 @@
+# Parallels (SWSoft)
+
+> Parallels is a virtualization and remote-access software company (founded as SWSoft in 1999, renamed Parallels in 2008, now part of Alludo/Corel). Its Parallels Remote Application Server (RAS) product ships a public REST API and a PowerShell SDK for automating farm administration. The API is served by the customer's self-hosted RAS server (default TCP port 20443) and authenticated with a session token.
+
+## APIs
+
+- [Parallels RAS REST API](https://docs.parallels.com/landing/ras-rest-api-guide): Manage a Parallels RAS farm — sites, secure gateways, RD session hosts, providers, publishing, policies and licensing. Base path api/<resource> on the RAS host at port 20443.
+- [Parallels RAS PowerShell API](https://docs.parallels.com/landing/ras-powershell-api-guide): RASAdmin PowerShell module for scripting RAS administration.
+
+## Docs
+
+- [API reference](https://docs.parallels.com/landing/ras-rest-api-guide/api-reference)
+- [Getting started / About](https://docs.parallels.com/landing/ras-rest-api-guide)
+- [Examples (logon, sites, gateways, publishing, licensing)](https://docs.parallels.com/landing/ras-rest-api-guide/examples)
+- [RAS APIs overview (Administrator's Guide)](https://docs.parallels.com/landing/ras-admin-guide/parallels-ras-21-administrators-guide/parallels-ras-apis)
+- [PowerShell SDK product page](https://www.parallels.com/products/ras/capabilities/powershell-sdk/)
+
+## Authentication
+
+- Log on: POST api/session/logon with JSON { username, password }; response returns authToken.
+- Pass the token on every subsequent request via the auth_token request header.
+- Version negotiated on Content-Type: application/json; api-version=1.0.
+
+## Artifacts (API Evangelist)
+
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/authentication/parallels-swsoft-authentication.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/conventions/parallels-swsoft-conventions.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/lifecycle/parallels-swsoft-lifecycle.yml)
+- [Packages / SDKs](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/packages/parallels-swsoft-packages.yml)
+- [Error catalog](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/errors/parallels-swsoft-problem-types.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/conformance/parallels-swsoft-conformance.yml)
+- [MCP (candidate)](https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/mcp/parallels-swsoft-mcp.yml)
+
+## Company
+
+- [Website](https://www.parallels.com/)
+- [Parallels RAS product](https://www.parallels.com/products/ras/)
+- [GitHub organization](https://github.com/Parallels)
+- [Support](https://www.parallels.com/products/ras/support/)
+- [Legal / Terms / Privacy](https://www.parallels.com/about/legal/)

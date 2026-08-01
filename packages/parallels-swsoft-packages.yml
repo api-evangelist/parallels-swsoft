@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.parallels.com/products/ras/capabilities/powershell-sdk/
+note: >-
+  Parallels distributes first-party automation tooling for RAS via a PowerShell
+  admin module (installed with the RAS installer) plus an official GitHub sample
+  repository. No first-party client libraries were found on npm, PyPI, Maven
+  Central, NuGet, pkg.go.dev, RubyGems, Packagist or crates.io — the RAS APIs
+  (REST + PowerShell) are consumed against the self-hosted server directly.
+packages:
+  - language: powershell
+    registry: other
+    name: RASAdmin
+    url: https://www.parallels.com/products/ras/capabilities/powershell-sdk/
+    install: >-
+      Install via the Parallels RAS installer (Custom > PowerShell component,
+      or: msiexec /i RASInstaller-*.msi ADDLOCAL=F_PowerShell /qb), then
+      Import-Module RASAdmin
+    docs: https://docs.parallels.com/landing/ras-powershell-api-guide
+    official: true
+    description: >-
+      Parallels RAS PowerShell Admin Module (RASAdmin) — first-party cmdlets to
+      automate Parallels RAS farm administration (the RAS PowerShell SDK).
+  - language: powershell
+    registry: github
+    name: Parallels/RAS-PowerShell
+    url: https://github.com/Parallels/RAS-PowerShell
+    install: git clone https://github.com/Parallels/RAS-PowerShell
+    official: true
+    license: MIT
+    description: >-
+      Official Parallels repository of sample RAS PowerShell cmdlets, tools, ARM
+      and Bicep templates, and provider-framework samples.

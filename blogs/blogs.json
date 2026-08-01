@@ -1,0 +1,14 @@
+{
+  "repo": "parallels-swsoft",
+  "feeds": [
+    {
+      "source": "https://www.parallels.com/products/ras/support/",
+      "feed_url": "https://www.parallels.com/products/ras/support/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

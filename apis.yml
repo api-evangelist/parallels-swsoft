@@ -1,8 +1,15 @@
 aid: parallels-swsoft
 name: Parallels (SWSoft)
-description: Parallels (SWSoft) is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Parallels is a virtualization and remote-access software company, originally
+  founded as SWSoft in 1999 and renamed Parallels in 2008 (now part of
+  Alludo/Corel). Its flagship enterprise product, Parallels Remote Application
+  Server (RAS), delivers virtual apps and desktops and exposes a public REST API
+  plus a PowerShell SDK (RASAdmin) for automating farm administration — sites,
+  secure gateways, RD session hosts, cloud providers (Azure/AVD, AWS EC2,
+  Hyper-V, VMware, Nutanix), publishing, policies and licensing. The RAS REST API
+  is served by the customer's self-hosted RAS server (default TCP port 20443)
+  and authenticated with a session token obtained via api/session/logon.
 url: https://raw.githubusercontent.com/api-evangelist/parallels-swsoft/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +17,60 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.parallels.com/fileadmin/images/logo/parallels-logo.svg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Virtualization
+- Remote Desktop
+- Application Delivery
+- Cloud Infrastructure
+- VDI
+- Automation
+- REST API
+apis:
+- name: Parallels RAS REST API
+  description: >-
+    REST API for automating Parallels Remote Application Server (RAS) —
+    infrastructure, sites, secure gateways, RD session hosts, cloud providers,
+    publishing, policies and licensing. Served by the self-hosted RAS server on
+    TCP 20443; session-token auth via the auth_token header.
+  humanURL: https://docs.parallels.com/landing/ras-rest-api-guide
+  baseURL: https://parallels-ras-host:20443/api
+  x-self-hosted: true
+  properties:
+  - type: Documentation
+    url: https://docs.parallels.com/landing/ras-rest-api-guide
+  - type: APIReference
+    url: https://docs.parallels.com/landing/ras-rest-api-guide/api-reference
+  - type: GettingStarted
+    url: https://docs.parallels.com/landing/ras-rest-api-guide
+  - type: Authentication
+    url: authentication/parallels-swsoft-authentication.yml
+  - type: Conventions
+    url: conventions/parallels-swsoft-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/parallels-swsoft-lifecycle.yml
+  - type: ErrorCatalog
+    url: errors/parallels-swsoft-problem-types.yml
+  - type: Conformance
+    url: conformance/parallels-swsoft-conformance.yml
+  - type: MCPServer
+    url: mcp/parallels-swsoft-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +79,52 @@ maintainers:
 common:
 - type: Website
   url: http://www.parallels.com/
+- type: DeveloperPortal
+  url: https://docs.parallels.com/
+- type: Documentation
+  url: https://docs.parallels.com/landing/ras-rest-api-guide
+- type: APIReference
+  url: https://docs.parallels.com/landing/ras-rest-api-guide/api-reference
+- type: GettingStarted
+  url: https://docs.parallels.com/landing/ras-rest-api-guide
+- type: Support
+  url: https://www.parallels.com/products/ras/support/
+- type: Blog
+  url: https://www.parallels.com/blogs/ras/
+- type: GitHubOrganization
+  url: https://github.com/Parallels
+- type: Pricing
+  url: https://www.parallels.com/products/ras/buy/
+- type: SignUp
+  url: https://www.parallels.com/products/ras/trial/
+- type: Login
+  url: https://my.parallels.com/
+- type: TermsOfService
+  url: https://www.parallels.com/about/legal/terms/
+- type: PrivacyPolicy
+  url: https://www.parallels.com/about/legal/privacy/
+- type: Authentication
+  url: authentication/parallels-swsoft-authentication.yml
+- type: Conventions
+  url: conventions/parallels-swsoft-conventions.yml
+- type: Lifecycle
+  url: lifecycle/parallels-swsoft-lifecycle.yml
+- type: Packages
+  url: packages/parallels-swsoft-packages.yml
+- type: SDKs
+  url: packages/parallels-swsoft-packages.yml
+- type: ErrorCatalog
+  url: errors/parallels-swsoft-problem-types.yml
+- type: Conformance
+  url: conformance/parallels-swsoft-conformance.yml
+- type: MCPServer
+  url: mcp/parallels-swsoft-mcp.yml
+- type: LLMsTxt
+  url: llms/parallels-swsoft-llms.txt
+- type: DomainSecurity
+  url: security/parallels-swsoft-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1

@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.parallels.com/landing/ras-rest-api-guide
+docs: https://docs.parallels.com/landing/ras-rest-api-guide/examples/basic-sample
+summary:
+  types: [http]
+  scheme: token
+  note: >-
+    Parallels RAS REST API uses a custom session-token scheme. The client logs
+    on with administrator credentials and receives an authToken, which is then
+    supplied on every subsequent request via the auth_token request header. The
+    API is served by the self-hosted RAS server (default TCP port 20443), so the
+    token is issued and validated by the customer's own RAS deployment, not by a
+    Parallels-hosted identity provider. There is no OAuth2/OIDC on the REST API.
+schemes:
+  - name: session_token
+    type: http
+    scheme: token
+    in: header
+    parameter: auth_token
+    obtained_via:
+      operation: POST api/session/logon
+      request_body: '{ "username": "...", "password": "..." }'
+      response_field: authToken
+    sources: [docs.parallels.com/landing/ras-rest-api-guide]

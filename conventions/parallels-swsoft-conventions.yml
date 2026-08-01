@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.parallels.com/landing/ras-rest-api-guide
+api: Parallels RAS REST API
+summary: >-
+  Cross-cutting request/response semantics for the Parallels RAS REST API,
+  captured from the official REST API guide and examples. The API is served by
+  the self-hosted RAS server over HTTP/HTTPS and answers every request with JSON.
+authentication:
+  style: session token
+  detail: >-
+    Log on via POST api/session/logon with admin credentials, receive authToken,
+    pass it on the auth_token header for all subsequent calls. See
+    authentication/parallels-swsoft-authentication.yml.
+versioning:
+  style: content-type parameter
+  detail: >-
+    The API version is negotiated through the Content-Type header, e.g.
+    "Content-Type: application/json; api-version=1.0". Current documented
+    api-version is 1.0. See lifecycle/parallels-swsoft-lifecycle.yml.
+media_type: application/json
+idempotency:
+  supported: false
+  detail: >-
+    No Idempotency-Key header or documented idempotent-retry contract is
+    published for the RAS REST API. Writes are ordinary POST/PUT/DELETE against
+    id-addressed resources.
+pagination:
+  supported: false
+  detail: >-
+    Collection endpoints (e.g. GET api/site, GET api/gateway) return full JSON
+    arrays; no cursor/offset pagination parameters are documented.
+resource_addressing:
+  style: numeric-id path segments
+  detail: >-
+    Resources are addressed by integer id in the path (e.g. GET api/site/1,
+    GET api/gateway/{id}). Objects carry an "id" field plus a "siteId" scoping
+    field for site-scoped resources.
+error_envelope:
+  detail: >-
+    Errors are returned as JSON with standard HTTP status codes; successful
+    responses carry the resource object or array directly. See
+    errors/ for the derived problem list.
+rate_limiting:
+  detail: >-
+    No published rate-limit headers or quotas; the API is a self-hosted
+    management interface bounded by the customer's RAS server capacity.
+cross_links:
+  authentication: authentication/parallels-swsoft-authentication.yml
+  lifecycle: lifecycle/parallels-swsoft-lifecycle.yml

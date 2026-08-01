@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://docs.parallels.com/landing/ras-rest-api-guide/api-reference
+note: >-
+  No official hosted/remote MCP server was found for Parallels RAS. This is a
+  CANDIDATE tool surface derived from documented Parallels RAS REST API
+  operations, for evaluation only. Because RAS is self-hosted, any such server
+  would run against the customer's own RAS host (default port 20443) and use the
+  session-token auth flow (POST api/session/logon -> auth_token header).
+server:
+  name: parallels-ras
+  transport: http
+  url: null
+tools:
+  - name: logon
+    description: Log on to Parallels RAS with admin credentials and obtain an auth token.
+    source_operation: POST api/session/logon
+  - name: list_sites
+    description: List all sites in the RAS farm.
+    source_operation: GET api/site
+  - name: get_site
+    description: Get a single site by id.
+    source_operation: GET api/site/{id}
+  - name: list_gateways
+    description: List all secure gateways.
+    source_operation: GET api/gateway
+  - name: get_gateway
+    description: Get a single secure gateway by id.
+    source_operation: GET api/gateway/{id}
+  - name: list_published_resources
+    description: List published applications, desktops and folders.
+    source_operation: GET api/publishing
+  - name: list_rd_session_hosts
+    description: List RD Session Hosts (RDS) in the farm.
+    source_operation: GET api/rds
+  - name: get_licensing
+    description: Retrieve RAS licensing information.
+    source_operation: GET api/licensing
