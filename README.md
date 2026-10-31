@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Parallels (SWSoft) is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Parallels is a virtualization and remote-access software company, originally founded as SWSoft in 1999 and renamed Parallels in 2008 (now part of Alludo/Corel). Its flagship enterprise product, Parallels Remote Application Server (RAS), delivers virtual apps and desktops and exposes a public REST API plus a PowerShell SDK (RASAdmin) for automating farm administration — sites, secure gateways, RD session hosts, cloud providers (Azure/AVD, AWS EC2, Hyper-V, VMware, Nutanix), publishing, policies and licensing. The RAS REST API is served by the customer's self-hosted RAS server (default TCP port 20443) and authenticated with a session token obtained via api/session/logon.
 
-Backed by: insight-partners — http://www.parallels.com/
+**Areas:** Company · Virtualization · Remote Desktop · Application Delivery · Cloud Infrastructure · VDI · Automation · REST API
+
+## Parallels (SWSoft) on APIs.io
+
+Everything profiled for Parallels (SWSoft) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/parallels-swsoft/](https://apis.io/providers/parallels-swsoft/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Parallels RAS REST API](https://apis.io/apis/parallels-swsoft/parallels-ras-rest-api/) — REST API for automating Parallels Remote Application Server (RAS) — infrastructure, sites, secure gateways, RD session hosts, cloud providers, publishing,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [parallels-ras](https://apis.io/servers/parallels-swsoft/parallels-ras/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Parallels Swsoft Authentication](https://apis.io/security/parallels-swsoft/parallels-swsoft-authentication/)
+- [Parallels Swsoft Domain Security](https://apis.io/security/parallels-swsoft/parallels-swsoft-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.parallels.com/)
+- [Documentation](https://docs.parallels.com/landing/ras-rest-api-guide)
+- [Getting started](https://docs.parallels.com/landing/ras-rest-api-guide)
+- [API reference](https://docs.parallels.com/landing/ras-rest-api-guide/api-reference)
+- [Pricing](https://www.parallels.com/products/ras/buy/)
+- [Sign up](https://www.parallels.com/products/ras/trial/)
+- [Support](https://www.parallels.com/products/ras/support/)
+- [Blog](https://www.parallels.com/blogs/ras/)
+- [Terms of service](https://www.parallels.com/about/legal/terms/)
+- [Privacy policy](https://www.parallels.com/about/legal/privacy/)
+- [GitHub](https://github.com/Parallels)
+
+## API Evangelist rating
+
+**Kin Score 31.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 44.7 |
+
+**Agent readiness 3.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/parallels-swsoft/](https://apis.io/providers/parallels-swsoft/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Parallels (SWSoft): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/parallels-swsoft/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
